@@ -102,9 +102,9 @@ sealed class MySiteCardAndItem(open val type: Type, open val activeQuickStartIte
                 ) : DashboardCard(dashboardCardType)
 
                 data class TodaysStatsCard(
-                    val views: String,
-                    val visitors: String,
-                    val likes: String
+                    val views: UiString,
+                    val visitors: UiString,
+                    val likes: UiString
                 ) : DashboardCard(DashboardCardType.TODAYS_STATS_CARD)
 
                 sealed class PostCard(

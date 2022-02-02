@@ -44,7 +44,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/likes_title"
             style="@style/MySiteTodaysStatsCardStatTitle"
-            android:layout_width="61dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/my_site_todays_stat_card_likes"
             app:layout_constraintStart_toStartOf="@+id/likes_count"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@+id/views_count"
             app:layout_constraintTop_toBottomOf="@+id/visitors_title"
-            tools:text="1,743" />
+            tools:text="1,543" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/likes_count"

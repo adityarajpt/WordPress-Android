@@ -5,7 +5,7 @@ import org.wordpress.android.ui.mysite.MySiteCardAndItem.Card.DashboardCards.Das
 import org.wordpress.android.ui.mysite.MySiteCardAndItem.Card.DashboardCards.DashboardCard.ErrorCard
 import org.wordpress.android.ui.mysite.MySiteCardAndItemBuilderParams.DashboardCardsBuilderParams
 import org.wordpress.android.ui.mysite.cards.dashboard.posts.PostCardBuilder
-import org.wordpress.android.ui.mysite.cards.dashboard.todaystat.TodaysStatsCardBuilder
+import org.wordpress.android.ui.mysite.cards.dashboard.todaysstats.TodaysStatsCardBuilder
 import org.wordpress.android.ui.utils.ListItemInteraction
 import javax.inject.Inject
 
@@ -20,7 +20,8 @@ class CardsBuilder @Inject constructor(
                 if (dashboardCardsBuilderParams.showErrorCard) {
                     add(createErrorCard(dashboardCardsBuilderParams.onErrorRetryClick))
                 } else {
-                    todaysStatsCardBuilder.build(dashboardCardsBuilderParams.todaysStatsCardBuilderParams)?.let { add(it) }
+                    todaysStatsCardBuilder.build(dashboardCardsBuilderParams.todaysStatsCardBuilderParams)
+                            ?.let { add(it) }
                     addAll(postCardBuilder.build(dashboardCardsBuilderParams.postCardBuilderParams))
                 }
             }.toList()
